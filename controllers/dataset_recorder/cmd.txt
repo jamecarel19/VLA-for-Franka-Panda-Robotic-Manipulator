@@ -1,0 +1,15 @@
+
+
+python viewer.py dataset 1 
+
+python validate_dataset.py dataset/
+
+python train_example.py dataset --use_language --epochs 5 --device mps
+
+python -c "                
+import torch
+ckpt = torch.load('checkpoints/model3.pth', map_location='cpu')
+print(ckpt.keys())
+print('epoch:', ckpt.get('epoch'))
+print('val:', ckpt.get('val_loss'))
+

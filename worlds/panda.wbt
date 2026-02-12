@@ -1,0 +1,999 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/BakelitePlastic.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Plaster.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/cabinet/protos/Cabinet.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/GlossyPaint.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/PaintBucket.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/fire_extinguisher/protos/FireExtinguisher.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/telephone/protos/OfficeTelephone.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/Bolt.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/Nut.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/solids/protos/SolidBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/Copper.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/OldSteel.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/Wrench.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/Hammer.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/tools/protos/PlatformCart.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/PlasticCrate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/factory/containers/protos/WoodenBox.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Radiator.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Window.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Door.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/DoorLever.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/ThreadMetalPlate.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/CorrugatedMetal.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/franka_emika/panda/protos/Panda.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/vehicles/protos/lincoln/LincolnMKZSimple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/appearances/protos/RoughOak.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/franka_emika/panda/protos/PandaHand.proto"
+
+WorldInfo {
+  info [
+    "This example showcases Franka Emika's Panda robot in a factory setting."
+  ]
+  title "Panda demo"
+  basicTimeStep 16
+}
+DEF VIEWPOINT Viewpoint {
+  orientation -0.1493071299710223 -0.1387121555244601 0.9790129308898705 4.608927627890753
+  position 0.2412451512354573 7.777487279192962 2.1601090185110903
+  ambientOcclusionRadius 1
+}
+DirectionalLight {
+  ambientIntensity 1
+  direction 0 -1 -1
+  intensity 2
+}
+TexturedBackground {
+  texture "factory"
+  skybox FALSE
+}
+Floor {
+  translation 0 5.6 0
+  size 6.95 11.5
+  tileSize 2 2
+  appearance BakelitePlastic {
+    color "braun"
+  }
+}
+DEF ROOF Pose {
+  translation 0.06 5.545 3.65
+  rotation 0 1 0 3.141592644
+  children [
+    Shape {
+      appearance Plaster {
+        textureTransform TextureTransform {
+          scale 5.7 5.05
+        }
+      }
+      geometry Plane {
+        size 7.2 11.36
+      }
+    }
+  ]
+}
+Cabinet {
+  hidden position_6_0 8.806973810668574e-05
+  hidden translation_7 -2.1907347325718163e-05 -9.646872189961186e-10 0
+  hidden rotation_7 0 0 1 8.806974040917837e-05
+  hidden position_10_0 -0.00010039267118743626
+  hidden translation_11 -2.8468851684155824e-05 1.42903167077435e-09 0
+  hidden rotation_11 0 0 -1 0.0001003926695951197
+  translation -2.70511 11.1138 0
+  rotation 0 0 -1 1.5708
+  name "cabinet(2)"
+  rowsHeights [
+    2
+  ]
+  columnsWidths [
+    0.5, 0.17, 0.4
+  ]
+  layout [
+    "RightSidedDoor (1, 1, 1, 1, 1.5)"
+    "LeftSidedDoor (2, 1, 2, 1, 1.5)"
+  ]
+  primaryAppearance GlossyPaint {
+    baseColor 0.729 0.741 0.713
+  }
+  secondaryAppearance GlossyPaint {
+    baseColor 0.729 0.741 0.713
+  }
+}
+PaintBucket {
+  hidden position_0_0 -2.0000009298043264
+  hidden linearVelocity_0 -2.4808650943950626e-06 0.00011318939757252349 0.00014493537071614046
+  hidden angularVelocity_0 -0.0030896397498555188 -6.718476249151521e-05 8.518254894573286e-09
+  hidden rotation_1 0 -1 0 2.0000009298043264
+  hidden position_1_0 6.725103377214165e-07
+  hidden linearVelocity_1 -7.376325546061443e-06 0.00033875046531789394 0.00013232407136327002
+  hidden angularVelocity_1 -0.0030896375472018065 -6.719061116125915e-05 3.433712918066345e-09
+  hidden rotation_2 0 1 0 6.723710401462633e-07
+  hidden linearVelocity_2 -5.9660511926599466e-06 0.00027333493692496016 0.00014664584222987326
+  hidden angularVelocity_2 -0.0030896011210769696 -7.072236061477844e-05 7.83446303597256e-09
+  translation -0.8550880340508509 2.442028842972095 0.725638314324384
+  rotation -0.11941539656244764 -0.38247098889439424 0.916218263143656 0.011300268199471619
+}
+PaintBucket {
+  hidden position_0_0 -2.000000946423984
+  hidden linearVelocity_0 -7.243875341615385e-05 -0.00017871745784627403 0.00031241738424657754
+  hidden angularVelocity_0 0.0048800096589342165 -0.001967695218854329 -4.7065416148756365e-07
+  hidden rotation_1 0 -1 0 2.000000946423984
+  hidden position_1_0 -3.1759587114520526e-06
+  hidden linearVelocity_1 -0.00021724975879754786 -0.0005348467459252842 9.842472848117064e-05
+  hidden angularVelocity_1 0.004880079111649338 -0.0019678774898219537 -5.174037210948255e-07
+  hidden rotation_2 0 -1 0 3.1760104396138944e-06
+  hidden linearVelocity_2 -0.00017669042826510447 -0.0004312847406307003 -6.830723086033171e-05
+  hidden angularVelocity_2 0.004895593168762076 -0.0020265348402088677 -6.022326537266194e-07
+  translation -0.6197003812896789 2.57705095387477 0.7256343780975043
+  rotation 0.007900494360526485 -0.015897722913538904 0.9998424098801889 0.25861995934940496
+  name "paint bucket(1)"
+}
+FireExtinguisher {
+  translation 3.373800511425308 6.384505717973736 -0.002354398922964962
+  rotation 1.9020774362577188e-05 0.0015607898328813567 0.9999987817859118 -2.879793569114801
+}
+DEF FIRE_EXTINGUISHER_PANEL Pose {
+  translation 3.572 6.07451 1.98
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/samples/environments/factory/worlds/textures/fire_extinguisher_panel.jpg"
+          ]
+        }
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.2 0.2
+      }
+    }
+  ]
+}
+FireExtinguisher {
+  translation 3.249 11.08469 0.58
+  rotation 0 0 1 4.974188353
+  name "fire extinguisher(2)"
+  enablePhysics FALSE
+}
+OfficeTelephone {
+  translation 1.69587 11.0762 1.099
+  rotation -0.25056300542381216 -0.25056300542381216 0.9351130202419243 -1.6378353071795866
+  enablePhysics FALSE
+}
+Table {
+  translation 3.01946 1.86217 0
+  name "table(1)"
+  size 0.8 1.8 0.7
+  feetSize 0.05 0.05
+  trayAppearance PBRAppearance {
+    baseColor 0.926 0.912 0.698
+    roughness 0.8
+    metalness 0
+  }
+  legAppearance BrushedAluminium {
+    colorOverride 0.333 0.341 0.325
+  }
+}
+Table {
+  translation 0 2.64217 -2.62797e-05
+  rotation 0 0 1 1.5708
+  name "table(4)"
+  size 1.2 2.2 0.7
+  feetSize 0.05 0.05
+  trayAppearance Parquetry {
+    type "light strip"
+    colorOverride 0.933333 0.933333 0.92549
+  }
+  legAppearance BrushedAluminium {
+    colorOverride 0.333 0.341 0.325
+  }
+}
+Pose {
+  translation 0.650001 2.8 0.715
+  children [
+    Bolt {
+      translation 1.1484032116149123e-05 -6.531532497078274e-07 0.011284052100733466
+      rotation 1.2418756987914952e-05 -0.9999999998458474 -1.2412887538500324e-05 1.570358405099507
+    }
+    Bolt {
+      translation 1.3618559018491183e-05 -7.829282364646417e-07 0.016512556521978916
+      rotation 1.2418706884273003e-05 -0.9999999998458505 -1.2412690335483677e-05 1.5703474045992125
+      name "bolt(1)"
+    }
+    Bolt {
+      translation -0.0999973585114986 2.6645352591003757e-15 0.0112846871148794
+      rotation -1.2316411748591874e-13 -1 1.0227464574463016e-13 1.5706949098377097
+      name "bolt(2)"
+    }
+    Bolt {
+      translation 2.6414892333459505e-06 0.05000000000000249 0.011284687115239667
+      rotation -1.2043816189126756e-13 -1 9.942733899849347e-14 1.5706949098099177
+      name "bolt(3)"
+    }
+    Bolt {
+      translation -0.04999735851087583 0.050000000000003375 0.011284687115137637
+      rotation -1.5622559260737758e-13 -1 1.361456768973654e-13 1.5706949098140435
+      name "bolt(4)"
+    }
+    Bolt {
+      translation -0.09999735851181335 0.05000000000000382 0.011284687114760716
+      rotation -1.7047154450500626e-13 -1 1.4872714840578434e-13 1.5706949098495435
+      name "bolt(5)"
+    }
+    Bolt {
+      translation 0.05000264148730593 2.6645352591003757e-15 0.011284687114322178
+      rotation -1.2579344235844008e-13 -1 1.0428931081524944e-13 1.5706949098831193
+      name "bolt(6)"
+    }
+    Bolt {
+      translation 0.10000264148926163 6.661338147750939e-15 0.01128468711524555
+      rotation -2.798783705669297e-13 -1 2.570266805965394e-13 1.5706949098087668
+      name "bolt(7)"
+    }
+    Bolt {
+      translation 0.15000264148914488 -6.217248937900877e-15 0.011284687115190484
+      rotation 2.5598367615323925e-13 -1 -2.603053505189165e-13 1.5706949098133232
+      name "bolt(8)"
+    }
+    Bolt {
+      translation 0.15000264148942377 0.04999999999999982 0.01128468711535413
+      rotation -3.285387092851492e-15 -1 1.1700090172540442e-15 1.5706949098026965
+      name "bolt(9)"
+    }
+    Bolt {
+      translation 0.10000264148818239 0.05000000000000249 0.011284687114753167
+      rotation -1.2454420925156838e-13 -1 1.0384632085628254e-13 1.5706949098497984
+      name "bolt(10)"
+    }
+    Bolt {
+      translation 0.05000264148978806 0.05000000000000249 0.011284687115467928
+      rotation -1.2522131094366609e-13 -1 1.0402247570626045e-13 1.5706949097889789
+      name "bolt(11)"
+    }
+  ]
+}
+Pose {
+  translation 0.660001 2.66 0.704
+  rotation 0 1 0 -1.5707953071795862
+  children [
+    Nut {
+      translation -0.0005286478559405339 0 0.011999987875508156
+      rotation -1.6189763781187258e-10 1 -2.6685485452442547e-09 3.3125170209259493e-06
+    }
+    Nut {
+      translation -0.000528647855353892 0.04999999999999982 0.011999987875633944
+      rotation -1.882433818819392e-10 0.9999999999999999 -7.88017864970481e-11 3.3124808676339603e-06
+      name "nut(3)"
+    }
+    Nut {
+      translation -0.0005286988361117295 0 0.061999987875473894
+      rotation -2.5000147275080585e-11 0.9999999999999999 -3.959168415023045e-09 3.3125118056232244e-06
+      name "nut(1)"
+    }
+    Nut {
+      translation -0.0005286988359688438 0.04999999999999982 0.06199998787547123
+      rotation -4.0759562349633e-10 1 -6.879049059048888e-10 3.3125123692295683e-06
+      name "nut(4)"
+    }
+    Nut {
+      translation -0.0005287498167759752 0 0.1119999878755068
+      rotation -5.391445155535185e-10 1 -3.961356630739519e-10 3.3124882879076356e-06
+      name "nut(2)"
+    }
+    Nut {
+      translation -0.0005287498175570171 0.04999999999999982 0.11199998787550647
+      rotation -1.553965616056508e-10 0.9999999999999999 -1.921030583769975e-09 3.312488427877846e-06
+      name "nut(5)"
+    }
+    Nut {
+      translation -0.0005285968752392067 0.04999999999999982 -0.038000012124317806
+      rotation -2.5343187297679367e-10 1 1.154322265904898e-09 3.312483057361937e-06
+      name "nut(6)"
+    }
+    Nut {
+      translation -0.0005285458938597554 0.04999999999999982 -0.08800001212426223
+      rotation -2.27031538921097e-10 1 -6.159238122016123e-09 3.312481055450405e-06
+      name "nut(7)"
+    }
+    Nut {
+      translation -0.000528494913664801 0.04999999999999982 -0.13800001212433277
+      rotation -2.432254388601951e-10 1 2.2361960035102386e-10 3.3125162277487273e-06
+      name "nut(8)"
+    }
+    Nut {
+      translation -0.0005284949129820138 0 -0.13800001212431
+      rotation -3.0675866204294236e-10 0.9999999999999999 1.0882913965099474e-09 3.312508987369461e-06
+      name "nut(9)"
+    }
+    Nut {
+      translation -0.0005285458944839228 0 -0.088000012124275
+      rotation -5.020121013363871e-10 1 -4.0678469807403714e-10 3.31248564169128e-06
+      name "nut(10)"
+    }
+    Nut {
+      translation -0.000528596874568299 0 -0.0380000121244245
+      rotation -2.3863443214354635e-10 0.9999999999999999 -1.6569309985262678e-09 3.3125121639608613e-06
+      name "nut(11)"
+    }
+  ]
+}
+Pose {
+  translation 0 2.75 -0.27
+  children [
+    SolidBox {
+      translation 0.02901756702606594 0.11863394964320628 0.9849344803059632
+      rotation 0.9988853963555769 -0.03337637598333492 -0.0333763759833349 1.5719115518407483
+      size 0.03 0.03 0.06
+      appearance Copper {
+      }
+      physics Physics {
+        density -1
+        mass 0.2
+      }
+    }
+    Pose {
+      translation 0 -0.1 0
+      children [
+        SolidBox {
+          hidden linearVelocity_0 5.921295293359098e-18 -6.503448065196636e-17 2.3092638908813336e-15
+          hidden angularVelocity_0 5.189185492800462e-15 -2.5145752900425184e-16 2.8701740164452322e-18
+          translation -0.06018270003154972 0.21041899999897895 0.9849344802999999
+          rotation -0.9997379624859429 -0.016186512355277845 0.016186512355277953 1.571058398643782
+          name "box(2)"
+          size 0.03 0.03 0.06
+          appearance OldSteel {
+          }
+          physics Physics {
+            density -1
+            mass 0.2
+          }
+        }
+      ]
+    }
+  ]
+}
+Wrench {
+  translation 0.6950000898809449 2.327420024364176 0.6989193279257999
+  rotation -4.9720770219701595e-05 -1.9613091407642848e-05 0.9999999985715858 0.7854056135196795
+}
+Wrench {
+  translation 0.6739710656573844 2.4624500660403372 0.6989193279258
+  rotation -2.6999933371387687e-05 -1.9998866534738408e-05 0.9999999994355244 1.3090003058755193
+  name "wrench(1)"
+}
+Hammer {
+  translation -0.5149609317461353 2.9843767618505317 0.7125671416419685
+  rotation -0.005236076337817783 0.003625907599512198 -0.9999797179436511 2.0819954088603314
+}
+PlatformCart {
+  hidden position_0_0 0.002268196775440325
+  hidden position2_0_0 0.04783158657146457
+  hidden position_0_1 -0.002433991779263705
+  hidden position2_0_1 0.02485804057092992
+  hidden position_0_2 0.048733522338965496
+  hidden position_0_3 0.02469965240459687
+  hidden rotation_2 0.9994269943554062 0.02504068801569186 -0.022773820439706043 1.5713189137582126
+  hidden rotation_3 0.999844064236621 0.011210700161728588 -0.013644317963156617 1.5709862016275067
+  hidden rotation_4 0.9994065567161194 0.02435703219242425 -0.024357121660963495 1.5713936194055271
+  hidden rotation_5 0.9998475017345249 0.012348525316811338 -0.012348570675560853 1.5709525098938826
+  translation 3.1455988493131266 3.295142952821215 -0.0019040323557575345
+  rotation -0.00033891273688005895 -5.7318627814984776e-05 -0.9999999409263641 1.5684817295448834
+}
+PlasticCrate {
+  translation 3.17390321040909 3.4277763148602216 0.10213795685458377
+  rotation -0.16498632293726614 0.19187770538187957 0.9674515282023306 0.0024029660780154503
+  size 0.6 0.4 0.3
+  mass 2
+}
+PlasticCrate {
+  translation 3.1744157266447965 3.0376886594604295 0.10229246516848697
+  rotation -0.2502953405869926 0.2891860284795837 0.9239716897246617 0.0015853193385226946
+  name "plastic crate(1)"
+  size 0.6 0.35 0.3
+  mass 2
+}
+PlatformCart {
+  hidden position_0_0 -1.8480542024661674e-06
+  hidden position2_0_0 0.002657469248919014
+  hidden position_0_1 2.802597866826014e-06
+  hidden position2_0_1 0.0026597566572604614
+  hidden position_0_2 0.0026572380352354917
+  hidden position_0_3 0.0026595222206354458
+  hidden rotation_2 0.9999982344725309 0.0013278041527171552 -0.0013296570809605197 1.5708017679846
+  hidden rotation_3 0.9999982314307637 0.0013312731746795107 -0.00132847547181243 1.5708017648436834
+  hidden rotation_4 0.9999982347805867 0.0013286125738094354 -0.0013286174540848834 1.5708017652209711
+  hidden rotation_5 0.9999982317444902 0.0013297546582787553 -0.00132975954274932 1.5708017682570714
+  translation 2.8872636384247983 4.170405966988294 -0.002704528963065611
+  rotation 0.0001726450875035514 -0.0006559041902601177 0.9999997699916572 3.141589999202752
+  name "platform cart(1)"
+}
+WoodenBox {
+  translation 2.862506325152166 4.126341232090957 0.3993205582425903
+  rotation 0.9931831408331435 0.11649866843829779 0.003912673883150153 0.002986947270771708
+  name "wooden box(1)"
+  mass 12
+}
+Wall {
+  translation 0.035 -0.025 0
+  rotation 0 0 1 4.712388966
+  name "wall(21)"
+  size 0.2 7.2 3.65
+  appearance Plaster {
+    textureTransform TextureTransform {
+      scale 3.7 2.4
+    }
+  }
+}
+Radiator {
+  translation -3.355 0.985 0.37
+  numberOfFins 30
+}
+Window {
+  translation -3.575 9.529 0
+  name "window(1)"
+  size 0.2 1.6 3.652
+  windowSillSize 0.1 0
+  wallAppearance Plaster {
+    textureTransform TextureTransform {
+      scale 0.8 0.8
+    }
+  }
+  frameAppearance GlossyPaint {
+    baseColor 0.58 0.52 0.47
+  }
+}
+Radiator {
+  translation -3.365 9.249 0.33
+  name "radiator(2)"
+}
+Wall {
+  translation 3.575 0.193 0
+  name "wall(9)"
+  size 0.2 0.65 3.652
+  appearance Plaster {
+    textureTransform TextureTransform {
+      scale 0.325 1.8
+    }
+  }
+}
+Wall {
+  translation 3.575 6.468 0
+  name "wall(10)"
+  size 0.2 0.5 3.652
+  appearance Plaster {
+    textureTransform TextureTransform {
+      scale 0.25 1.8
+    }
+  }
+}
+Door {
+  hidden translation_5 0.0010000106443903423 -3.3389770948133446e-09 1.3322676295501878e-15
+  hidden rotation_5 0 0 1 2.9802322387695313e-08
+  hidden position_6_0 0.020160526760519843
+  hidden rotation_7 -0.9999999999999999 0 0 0.00016052676193351325
+  translation 3.575 7.218 0
+  rotation 0 0 1 3.14159
+  name "door(1)"
+  size 0.2 1 3.652
+  position 2.2409242901862505e-08
+  jointAtLeft FALSE
+  selfClosing TRUE
+  doorAppearance GlossyPaint {
+    baseColor 0.58 0.52 0.47
+  }
+  wallAppearance Plaster {
+    textureTransform TextureTransform {
+      scale 0.5 0.7
+    }
+  }
+  frameAppearance GlossyPaint {
+    baseColor 0.58 0.52 0.47
+  }
+  doorHandle DoorLever {
+    canTurn TRUE
+    jointAtLeft FALSE
+  }
+  doorSlot [
+    Pose {
+      translation 0.027 -0.32 0.024
+      children [
+        Shape {
+          appearance ThreadMetalPlate {
+            textureTransform TextureTransform {
+              rotation 1.5708
+              scale 0.5 0.5
+            }
+            IBLStrength 1.6
+          }
+          geometry Box {
+            size 0.006 0.3 0.3
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.024 0 -0.554
+      children [
+        Shape {
+          appearance ThreadMetalPlate {
+            textureTransform TextureTransform {
+              scale 1.4 1.3
+            }
+            IBLStrength 2
+          }
+          geometry Box {
+            size 0.006 0.94 0.86
+          }
+        }
+      ]
+    }
+  ]
+}
+Wall {
+  translation 3.575 9.518 0
+  name "wall(3)"
+  size 0.2 3.6 3.652
+  appearance Plaster {
+    textureTransform TextureTransform {
+      scale 1.8 1.8
+    }
+  }
+}
+DEF WINDOW_DOOR_BLOCK Pose {
+  translation 3.575 5.218 0
+  rotation 0 0 1 3.141592644
+  children [
+    Door {
+      hidden translation_5 0.0017816164483165642 -0.00024447474676164704 1.5543122344752192e-15
+      hidden rotation_5 0 0 0.9999999999999999 0.0016450845919281554
+      rotation 0 0 1 -5.307179586466759e-06
+      name "door(4)"
+      size 0.2 1 3
+      position 0.0016450845920475516
+      jointAtLeft FALSE
+      doorAppearance GlossyPaint {
+        baseColor 0.58 0.52 0.47
+      }
+      wallAppearance DEF WALL_PLASTIC_APPEARANCE PBRAppearance {
+        baseColor 0.813 0.781 0.753
+        roughnessMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/samples/environments/factory/worlds/textures/plastic_roughness.jpg"
+          ]
+        }
+        metalness 0
+        textureTransform TextureTransform {
+          scale 0.5 0.7
+        }
+      }
+      frameAppearance BrushedAluminium {
+      }
+      doorHandle DoorLever {
+        jointAtLeft FALSE
+      }
+    }
+    Wall {
+      translation 0 -0.75 0
+      name "wall(13)"
+      size 0.2 0.5 3
+      appearance USE WALL_PLASTIC_APPEARANCE
+    }
+    Window {
+      translation 0 1 0
+      name "window(2)"
+      size 0.2 1 3
+      windowHeight 1.6
+      windowSillSize 0.1 0
+      wallAppearance USE WALL_PLASTIC_APPEARANCE
+      frameAppearance BrushedAluminium {
+      }
+    }
+    Window {
+      translation 0 2 0
+      name "window(3)"
+      size 0.2 1 3
+      windowHeight 1.6
+      windowSillSize 0.1 0
+      wallAppearance USE WALL_PLASTIC_APPEARANCE
+      frameAppearance BrushedAluminium {
+      }
+    }
+    Window {
+      translation 0 3 0
+      name "window(4)"
+      size 0.2 1 3
+      windowHeight 1.6
+      windowSillSize 0.1 0
+      wallAppearance USE WALL_PLASTIC_APPEARANCE
+      frameAppearance BrushedAluminium {
+      }
+    }
+    Window {
+      translation 0 4 0
+      name "window(5)"
+      size 0.2 1 3
+      windowHeight 1.6
+      windowSillSize 0.1 0
+      wallAppearance USE WALL_PLASTIC_APPEARANCE
+      frameAppearance BrushedAluminium {
+      }
+    }
+    Wall {
+      translation 0 4.6 0
+      name "wall(14)"
+      size 0.2 0.2 3
+      appearance USE WALL_PLASTIC_APPEARANCE
+    }
+    Wall {
+      translation 0 1.85 3
+      name "wall(15)"
+      size 0.2 5.7 0.652
+      appearance Plaster {
+        textureTransform TextureTransform {
+          scale 2.85 0.3
+        }
+      }
+    }
+    Pose {
+      translation 0.1 1.85 3
+      children [
+        Shape {
+          appearance DEF WALL_JOINT_APPEARANCE PBRAppearance {
+            baseColor 0.063 0.004 0.004
+            roughness 1
+            metalness 0
+          }
+          geometry Box {
+            size 0.02 5.7 0.02
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 1.85 2.405
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 5.7 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 -0.505 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 0.495 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 -0.995 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 1.5 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 2.5 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 3.5 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 4.5 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+    Pose {
+      translation 0.1 4.695 1.5
+      rotation -1 0 0 1.570796322
+      children [
+        Shape {
+          appearance USE WALL_JOINT_APPEARANCE
+          geometry Box {
+            size 0.02 3 0.01
+          }
+        }
+      ]
+    }
+  ]
+}
+Wall {
+  translation -3.575 10.829 0
+  name "wall(7)"
+  size 0.2 1 3.652
+  appearance Plaster {
+    textureTransform TextureTransform {
+      scale 0.5 1.8
+    }
+  }
+}
+Wall {
+  translation -3.575 7.669 0
+  name "wall(4)"
+  size 0.2 2.12 3.652
+  appearance Plaster {
+    textureTransform TextureTransform {
+      scale 1.06 1.8
+    }
+  }
+}
+Wall {
+  translation -3.495 5.099 0
+  name "wall(16)"
+  size 0.1 3.05 3.652
+  appearance CorrugatedMetal {
+    colorOverride 0.372 0.72 0.295
+    textureTransform TextureTransform {
+      scale 0.76 0.94
+    }
+  }
+}
+Wall {
+  translation -3.575 1.725 0
+  name "wall(12)"
+  size 0.2 3.7 3.652
+  appearance Plaster {
+    textureTransform TextureTransform {
+      scale 1.06 1.8
+    }
+  }
+}
+Door {
+  hidden translation_5 0.0017816164483161478 -0.00024447474676164704 1.5543122344752192e-15
+  hidden rotation_5 0 0 1 0.0016450845919281554
+  translation 2.4249 11.23 0
+  rotation 0 0 1 -1.5707953071795862
+  name "door(2)"
+  size 0.2 1 3.652
+  position 0.0016450845920464063
+  jointAtLeft FALSE
+  doorAppearance GlossyPaint {
+    baseColor 0.58 0.52 0.47
+  }
+  wallAppearance Plaster {
+    textureTransform TextureTransform {
+      scale 0.5 0.7
+    }
+  }
+  frameAppearance GlossyPaint {
+    baseColor 0.58 0.52 0.47
+  }
+  doorHandle DoorLever {
+    jointAtLeft FALSE
+  }
+}
+Wall {
+  translation -0.7751 11.23 0
+  rotation 0 0 -1 1.570796360359173
+  name "wall(5)"
+  size 0.2 5.3999999999999995 3.652
+  appearance Plaster {
+    textureTransform TextureTransform {
+      scale 2.7 1.8
+    }
+  }
+}
+Wall {
+  translation 3.1998 11.23 0
+  rotation 0 0 -1 1.570796360359173
+  name "wall(6)"
+  size 0.2 0.55 3.652
+  appearance Plaster {
+    textureTransform TextureTransform {
+      scale 0.25 1.8
+    }
+  }
+}
+Robot {
+  translation -1.35877 2.58002 1.5146
+  rotation -0.10674301714638575 -0.0823785132326573 -0.9908681591655186 1.50938
+  children [
+    Camera {
+      translation 0.428308 0.016196 0.15808
+      rotation 0.19479491815936725 -0.25386089334354134 -0.9474226019523202 -1.8843753071795861
+      name "workspace_camera"
+      fieldOfView 1.0472
+      width 480
+      height 360
+      far 8
+    }
+  ]
+  name "workspace_camera_robot"
+  controller "workspace_camera_logger"
+  supervisor TRUE
+}
+Panda {
+  translation -2.45568e-06 2.2 0.7
+  rotation 0 0 1 1.5708
+  controller "demo_replay"
+  endEffectorSlot [
+    DEF GRIPPER PandaHand {
+    }
+    Solid {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.408713 0.721416 0.930175
+            roughness 0.6
+            metalness 0
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+        Camera {
+          translation 0.1 -0.1 -0.1
+          rotation 0.6135719910778964 0.3834824944236852 0.6902684899626333 -2.8797956132800118
+          name "wrist_camera"
+          fieldOfView 1.05
+          width 480
+          height 360
+          far 8
+          lens Lens {
+          }
+          focus Focus {
+          }
+          recognition Recognition {
+          }
+        }
+      ]
+      name "wrist_camera_mount"
+    }
+  ]
+}
+Bolt {
+  translation 0.08 2.19 0.69
+  rotation 0.3574058186283875 0.8628565621288802 -0.35740681862788 1.71777
+  name "bolt(12)"
+  enablePhysics FALSE
+}
+Bolt {
+  translation -0.08 2.189 0.69
+  rotation -0.12942794302188446 -0.9831055672070398 0.12942894302144423 -1.58784
+  name "bolt(13)"
+  enablePhysics FALSE
+}
+Bolt {
+  translation 0.04 2.062 0.689
+  rotation 0.1294279597735375 -0.9831056944488314 -0.1294279597735375 -1.58784
+  name "bolt(14)"
+  enablePhysics FALSE
+}
+Bolt {
+  translation -0.04 2.0625 0.689
+  rotation 0.35740494636728165 -0.8628568705184134 -0.3574069463669815 -1.71777
+  name "bolt(15)"
+  enablePhysics FALSE
+}
+LincolnMKZSimple {
+  translation -0.019942 9.00447 0.4
+  rotation 0 0 1 -1.5708053071795867
+}
+PlasticCrate {
+  translation -0.75 2.53 0.72
+  rotation 0 0 1 -0.261795307179586
+  name "plastic crate(2)"
+  size 0.5 0.5 0.2
+}
+Group {
+  children [
+    Cabinet {
+      hidden position_6_0 0.00011799801773188239
+      hidden translation_7 -3.933168916920707e-05 -2.3205303789630705e-09 0
+      hidden rotation_7 0 0 1 0.00011799801927651812
+      hidden position_10_0 -0.00011799801771729915
+      hidden translation_11 -3.93316891643461e-05 2.3205303789630705e-09 0
+      hidden rotation_11 0 0 -1 0.00011799801927651812
+      hidden position_14_0 0.00011799801773220758
+      hidden translation_15 -3.933168916931547e-05 -2.3205303789630705e-09 0
+      hidden rotation_15 0 0 1 0.00011799801927651812
+      hidden position_18_0 -0.00011799801771821862
+      hidden translation_19 -3.933168916465259e-05 2.3205303789630705e-09 0
+      hidden rotation_19 0 0 -1 0.00011799801927651812
+      rotation 0 0 1 1.5708
+      name "cabinet(10)"
+      rowsHeights [
+        0.65
+      ]
+      columnsWidths [
+        0.67, 0.17, 0.5, 0.67, 0.17, 0.5
+      ]
+      layout [
+        "RightSidedDoor (1, 1, 1, 1, 1.5)"
+        "LeftSidedDoor (2, 1, 2, 1, 1.5)"
+        "RightSidedDoor (4, 1, 1, 1, 1.5)"
+        "LeftSidedDoor (5, 1, 2, 1, 1.5)"
+      ]
+      primaryAppearance RoughOak {
+        colorOverride 0.827 0.843 0.811
+        textureTransform TextureTransform {
+          rotation 1.5708
+          scale 2 2
+        }
+      }
+      secondaryAppearance GlossyPaint {
+        baseColor 0.806 0.694 0.419
+      }
+    }
+    SolidBox {
+      translation 0 0.13 1.72
+      name "board"
+      size 2.75 0.1 2
+      appearance ThreadMetalPlate {
+        type "square"
+        textureTransform TextureTransform {
+          scale 2 2.75
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+capturing=0
+frame=-1
